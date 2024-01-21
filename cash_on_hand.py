@@ -48,14 +48,28 @@ def CashonhandFUC():
         previous = int(item[1])
         if new_difference < 0:
             deficit_list.append(new_difference)
-    # Sort deficit_list by deficit amount in ascending order
-    deficit_list.sort()
-    # Get the top 3 highest deficit amounts and their corresponding days
-    top_3_deficits = deficit_list[0:3]
-    for diff in top_3_deficits:
-        difference = abs(diff)
-        print(f'{difference}')
-    print (daylist)
-    # Print the top 3 highest deficit amounts and their corresponding days
+            day = item[0]
+            daylist.append(day)
+    print (deficit_list)
+    print(daylist)
     return ""
+
 print(CashonhandFUC())
+
+
+    # # Sort deficit_list by deficit amount in ascending order
+    # deficit_list.sort()
+    # # Get the top 3 highest deficit amounts and their corresponding days
+    # top_3_deficits = deficit_list[0:3]
+    # for diff in top_3_deficits:
+    #     day =item[0]
+    #     difference = abs(diff)
+    #     print(f'{day}:{difference}')
+    
+    # print(daylist)
+    # print(deficit_list)
+
+    # Print the top 3 highest deficit amounts and their corresponding days
+#     return ""
+
+# print(CashonhandFUC())
