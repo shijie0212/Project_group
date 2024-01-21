@@ -54,7 +54,7 @@ def CashonhandFUC():
     top_3_deficits = deficit_list[0:3]
     for diff in top_3_deficits:
         difference = abs(diff)
-        print(f'{day},{difference}')
+        print(f'{difference}')
     print (daylist)
     # Print the top 3 highest deficit amounts and their corresponding days
     return ""
