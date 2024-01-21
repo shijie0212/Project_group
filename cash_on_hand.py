@@ -41,18 +41,13 @@ print(cash_on_hand[0])
 
 def CashonhandFUC():
     previous = 0
-    day=0
     deficit_list = []
-
+    daylist = []
     for item in cash_on_hand:
         new_difference = int(item[1]) - previous 
         previous = int(item[1])
-
         if new_difference < 0:
-            day = item[0]
             deficit_list.append(new_difference)
-            
-            
     # Sort deficit_list by deficit amount in ascending order
     deficit_list.sort()
     # Get the top 3 highest deficit amounts and their corresponding days
@@ -60,8 +55,7 @@ def CashonhandFUC():
     for diff in top_3_deficits:
         difference = abs(diff)
         print(f'{day},{difference}')
-
+    print (daylist)
     # Print the top 3 highest deficit amounts and their corresponding days
     return ""
-
 print(CashonhandFUC())
