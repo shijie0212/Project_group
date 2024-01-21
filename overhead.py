@@ -19,30 +19,18 @@ with fp.open(mode="r", encoding="UTF-8", newline="") as file:
 # print(overheads)
 
 
-category = []  
-for item in overheads:
-    if item[0] not in category:
-        category.append(item[0])
-print(category)
 percentagelist=[]
-def overheadfuc(cat):
-    total_summary=0
+def overheadfuc():
     for things in overheads:
-        if things[0] == cat:
-            total_summary += float(things[1])
-            percentage = round(total_summary/3,2)
-            percentagelist.append(percentage)
-    return percentage
+        cat = things[0]
+        percentage = float(things[1])
+        percentagelist.append(percentage)
+        Highest = max(percentagelist)
+        if percentage == max (percentagelist):
+            category = cat
+    return f"[Highest Overhead]{category}:{Highest}"
 
-overalllist = []
-for them in category:
-    overall=overheadfuc(them)
-    overalllist.append(overall)
-    Highest = max(overalllist)
-print(f"[Highest Overhead]{them}:{Highest}")
-    
-print(overalllist)
-
+print(overheadfuc())
 
 
 
