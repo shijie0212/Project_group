@@ -41,7 +41,7 @@ def profitlossFUC():
             ordinal = "2ND"
         else:
             ordinal = "3RD"
-        deficit_info += f'[{ordinal} HIGHEST NET PROFIT DEFICIT] Day: {day}, Difference: SGD{difference}\n'
+        deficit_info += f'[{ordinal} HIGHEST NET PROFIT DEFICIT] Day:{day}, Difference: SGD{difference}\n'
     return deficit_info
 
 print(profitlossFUC())
