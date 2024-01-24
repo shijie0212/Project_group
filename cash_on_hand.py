@@ -66,8 +66,6 @@ def CashonhandFUC():
 print(CashonhandFUC())
 
 
-
-
     # # Sort deficit_list by deficit amount in ascending order
     # deficit_list.sort()
     # # Get the top 3 highest deficit amounts and their corresponding days
