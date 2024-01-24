@@ -42,6 +42,7 @@ with fp.open(mode="r", encoding="UTF-8", newline="") as file:
 def CashonhandFUC():
     previous = 0
     deficit_list = []
+    deficit_info =""
     for item in cash_on_hand:
         new_difference = int(item[1]) - previous 
         previous = int(item[1])
@@ -49,7 +50,7 @@ def CashonhandFUC():
             day=item[0]
             # deficit_list.append(new_difference)
             deficit_list.append([day, abs(new_difference)])
-            print(f'[CASH DEFICIT]Day:{day}, Difference: SGD{abs(new_difference)}')
+            deficit_info += f'[CASH DEFICIT]Day:{day}, Difference: SGD{abs(new_difference)}\n'
                 # Sort deficit_info by deficit amount in descending order
     deficit_list.sort(key=lambda x: x[1], reverse=True)
 
@@ -61,10 +62,16 @@ def CashonhandFUC():
             ordinal = "2ND"
         else:
             ordinal = "3RD"
-        print(f'[{ordinal} HIGHEST DEFICIT] Day: {day}, Difference: SGD{difference}')
-    return ""
+        deficit_info += f'[{ordinal} HIGHEST DEFICIT] Day: {day}, Difference: SGD{difference}\n'
+    return deficit_info
 print(CashonhandFUC())
 
+
+# with open("Summary_report.txt", "w") as file:
+#     # Call main function to get the result
+#     summary = CashonhandFUC()
+#     # Write the result to the file
+#     file.write(summary)
 
     # # Sort deficit_list by deficit amount in ascending order
     # deficit_list.sort()

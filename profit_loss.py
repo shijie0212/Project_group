@@ -21,6 +21,7 @@ with fp.open(mode="r", encoding="UTF-8", newline="") as file:
 def profitlossFUC():
     previous = 0
     deficit_list = []
+    deficit_info=""
     for item in profitloss:
         new_difference = int(item[4]) - previous 
         previous = int(item[4])
@@ -28,7 +29,7 @@ def profitlossFUC():
             day=item[0]
             # deficit_list.append(new_difference)
             deficit_list.append([day, abs(new_difference)])
-            print(f'[NET PROFIT DEFICIT]Day:{day}, Difference: SGD{abs(new_difference)}')
+            deficit_info += f'[NET PROFIT DEFICIT]Day:{day}, Difference: SGD{abs(new_difference)}\n'
                 # Sort deficit_info by deficit amount in descending order
     deficit_list.sort(key=lambda x: x[1], reverse=True)
 
@@ -40,7 +41,7 @@ def profitlossFUC():
             ordinal = "2ND"
         else:
             ordinal = "3RD"
-        print(f'[{ordinal} HIGHEST NET PROFIT DEFICIT] Day: {day}, Difference: SGD{difference}')
-    return ""
+        deficit_info += f'[{ordinal} HIGHEST NET PROFIT DEFICIT] Day: {day}, Difference: SGD{difference}\n'
+    return deficit_info
 
 print(profitlossFUC())
