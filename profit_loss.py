@@ -31,7 +31,7 @@ def profitlossFUC():
             deficit_list.append([abs(new_difference), day])
             deficit_info += f'[NET PROFIT DEFICIT]Day:{day}, Difference: SGD{abs(new_difference)}\n'
                 # Sort deficit_info by deficit amount in descending order
-    deficit_list.sort(key=lambda x: x[1], reverse=True)
+    deficit_list.sort(reverse=True)
 
     # Print the top 3 highest deficit amounts and their corresponding days
     for i, (difference, day) in enumerate(deficit_list[:3], start=1):
