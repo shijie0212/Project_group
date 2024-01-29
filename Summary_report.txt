@@ -1,5 +1,4 @@
-[Highest Overhead]Shipping Expense:25.21%
-[CASH DEFICIT]Day:13, Difference: SGD15204
+[Highest Overhead]Shipping Expense:25.21%[CASH DEFICIT]Day:13, Difference: SGD15204
 [CASH DEFICIT]Day:16, Difference: SGD287991
 [CASH DEFICIT]Day:18, Difference: SGD39292
 [CASH DEFICIT]Day:19, Difference: SGD2257
@@ -28,7 +27,6 @@
 [ HIGHEST DEFICIT] Day:36, Difference:SGD1044638
 [2ND HIGHEST DEFICIT] Day:42, Difference:SGD850846
 [3RD HIGHEST DEFICIT] Day:60, Difference:SGD806222
-
 [NET PROFIT DEFICIT]Day:11, Difference: SGD1459602
 [NET PROFIT DEFICIT]Day:18, Difference: SGD2089649
 [NET PROFIT DEFICIT]Day:30, Difference: SGD327101

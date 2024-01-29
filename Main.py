@@ -4,7 +4,7 @@ def main():
     cash_on_hand_result=cash_on_hand.CashonhandFUC()
     profit_loss_result=profit_loss.profitlossFUC()
     # Concatenate the results
-    summary = f"{overhead_result}\n{cash_on_hand_result}\n{profit_loss_result}"
+    summary = f"{overhead_result}{cash_on_hand_result}{profit_loss_result}"
 
     # Return the summary string
     return summary
